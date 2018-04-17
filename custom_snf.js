@@ -76,7 +76,7 @@
                                 passive: !0
                             }), this.selector.addEventListener("touchend", this.touchendHandler), this.selector.addEventListener("touchmove", this.touchmoveHandler, {
                                 passive: !0
-                            }), this.selector.addEventListener("mousedown", this.mousedownHandler), this.selector.addEventListener("mouseup", this.mouseupHandler), this.selector.addEventListener("mouseleave", this.mouseleaveHandler), this.selector.addEventListener("mousemove", this.mousemoveHandler)), null === this.selector) throw new Error("Something wrong with your selector 😭");
+                            }), this.selector.addEventListener("mousedown", this.mousedownHandler), this.selector.addEventListener("mouseup", this.mouseupHandler), this.selector.addEventListener("mouseleave", this.mouseleaveHandler), this.selector.addEventListener("mousemove", this.mousemoveHandler)), null === this.selector) throw new Error("Something wrong with your selector ðŸ˜­");
                         this.resolveSlidesNumber(), this.selector.style.overflow = "hidden", this.sliderFrame = document.createElement("div"), this.sliderFrame.style.width = this.selectorWidth / this.perPage * this.innerElements.length + "px", this.sliderFrame.style.webkitTransition = "all " + this.config.duration + "ms " + this.config.easing, this.sliderFrame.style.transition = "all " + this.config.duration + "ms " + this.config.easing, this.config.draggable && (this.selector.style.cursor = "-webkit-grab");
                         for (var e = document.createDocumentFragment(), t = 0; t < this.innerElements.length; t++) {
                             var i = document.createElement("div");
@@ -205,14 +205,14 @@
                 }, {
                     key: "remove",
                     value: function(e, t) {
-                        if (e < 0 || e >= this.innerElements.length) throw new Error("Item to remove doesn't exist 😭");
+                        if (e < 0 || e >= this.innerElements.length) throw new Error("Item to remove doesn't exist ðŸ˜­");
                         this.innerElements.splice(e, 1), this.currentSlide = e <= this.currentSlide ? this.currentSlide - 1 : this.currentSlide, this.updateFrame(), t && t.call(this)
                     }
                 }, {
                     key: "insert",
                     value: function(e, t, i) {
-                        if (t < 0 || t > this.innerElements.length + 1) throw new Error("Unable to inset it at this index 😭");
-                        if (this.innerElements.indexOf(e) !== -1) throw new Error("The same item in a carousel? Really? Nope 😭");
+                        if (t < 0 || t > this.innerElements.length + 1) throw new Error("Unable to inset it at this index ðŸ˜­");
+                        if (this.innerElements.indexOf(e) !== -1) throw new Error("The same item in a carousel? Really? Nope ðŸ˜­");
                         this.innerElements.splice(t, 0, e), this.currentSlide = t <= this.currentSlide ? this.currentSlide + 1 : this.currentSlide, this.updateFrame(), i && i.call(this)
                     }
                 }, {
