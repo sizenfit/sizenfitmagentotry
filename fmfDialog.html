@@ -346,7 +346,7 @@
       <div class="snf5342-widget-head">
           <a ng-click="firstpanel()" class="snf5342-widget-back-btn snf5342-widget-toggle snf-icon-back" style="text-decoration: none"></a>
           <h2>Calculate your Size for</h2>
-          <p ng-cloak>{{vm.data.widget.sizechart.brandName}}&nbsp;
+          <p class="ng-cloak">{{vm.data.widget.sizechart.brandName}}&nbsp;
              {{vm.data.widget.sizechart.styleName}}&nbsp;
              {{vm.data.widget.sizechart.apparelType}}</p>
         </div><!-- .snf5342-widget-head -->
@@ -359,10 +359,10 @@
                     <label>Fit you wear in <p style="text-transform: capitalize;">{{bnamechange}}</p></label>
                   </div><!-- .snf5342-widget-form-left -->
                   <div class="snf5342-widget-form-item snf5342-widget-form-carousel" id="snf5342-widget-fit-list-main">
-                    <div class="snf5342-widget-form-item-crousel snf5342-widget-form-check snf5342-widget-fit-list">
-                      <div class="snf5342-widget-form-check-item" ng-hide="vm.dlgData.brandStyles[0] == null">
+                    <div class="snf5342-widget-form-item-crousel snf5342-widget-form-check snf5342-widget-fit-list owl-carousel 11112">
+                      <div class="snf5342-widget-form-check-item"  ng-hide="vm.dlgData.brandStyles[0] == null">
                         <label>
-                          <input type="radio" id="snf5342-widget-style-01" value={{vm.dlgData.brandStyles[0]}} ng-model="vm.dlgData.selected.style" ng-disabled="!vm.dlgData.selected.brand" ng-change="updateSizes(vm.dlgData.selected.style)">
+                          <input type="radio" id="snf5342-widget-style-01" value={{vm.dlgData.brandStyles[0]}} ng-model="vm.dlgData.selected.style" ng-disabled="!vm.dlgData.selected.brand" ng-change="updateSizes(vm.dlgData.selected.style)" checked>
                               <span>{{vm.dlgData.brandStyles[0]}}</span>
                         </label>
                       </div>
@@ -406,7 +406,7 @@
                     <label>Size you wear in <p style="text-transform: capitalize;"> {{bnamechange}}</p></label>
                   </div><!-- .snf5342-widget-form-left -->
                   <div class="snf5342-widget-form-item snf5342-widget-form-carousel" id="snf5342-widget-size-list">
-                    <div class="snf5342-widget-form-item-crousel snf5342-widget-form-check snf5342-widget-size-list">
+                    <div class="snf5342-widget-form-item-crousel snf5342-widget-form-check snf5342-widget-size-list owl-carousel 11111">
                            <div class="snf5342-widget-form-check-item" ng-hide="vm.dlgData.brandSizes[0] == null">
                               <label>
                               <input type="radio" value={{vm.dlgData.brandSizes[0]}} name="snf5342-widget-size" id="snf5342-widget-size-01"  ng-model="vm.dlgData.selected.size" ng-change="sizeChooser()"><span>{{vm.dlgData.brandSizes[0]}}</span>
