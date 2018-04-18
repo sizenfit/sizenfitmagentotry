@@ -1240,6 +1240,76 @@ function myfun1(){
     e1.style.visibility = "hidden" ;
 } 
 
+function updateSliderMW(){
+        //get height
+        var gh = angular.element(document.getElementById("snf5342-widget-select-height"));
+        var height111 = gh.scope().getheightnew();
+
+        console.log("Value of 111:-"+_.isUndefined(height111));
+
+        if(_.isUndefined(height111)){
+            console.log("in null");
+            min = document.getElementById('snf5342-widget-select-slider-ft').getAttribute('min');
+            console.log(min);
+            max = document.getElementById('snf5342-widget-select-slider-ft').getAttribute('max');
+            console.log(max);
+            min = parseInt(min) + parseInt(max);
+            console.log(min);
+            height111 = Math.floor(min/2);
+            console.log("height Value:-"+height111);
+        }
+
+        //get weight
+        var gw = angular.element(document.getElementById("snf5342-widget-select-weight"));
+        var weight111 = gw.scope().getweightnew();
+
+        console.log("Value of 111:-"+_.isUndefined(weight111));
+
+        if(_.isUndefined(weight111)){
+            console.log("in null");
+            min = document.getElementById('snf5342-widget-select-slider-kg').getAttribute('min');
+            console.log(min);
+            max = document.getElementById('snf5342-widget-select-slider-kg').getAttribute('max');
+            console.log(max);
+            min = parseInt(min) + parseInt(max);
+            console.log(min);
+            weight111 = Math.floor(min/2);
+            console.log("weight Value:-"+weight111);
+        }
+
+        //for kgs
+        var slider1 = range1.data("ionRangeSlider");
+        slider1.update({
+                        min: min1,
+                        max: max1,
+                        value: weight111,
+                        from: weight111
+                    });
+        var change = document.getElementById("snf5342-widget-select-weight");
+        change.value = weight111;
+
+        //for Ft
+        var slider = range.data("ionRangeSlider");
+        slider.update({
+                        min: min,
+                        max: max,
+                        value: height111,
+                        from: height111
+                    });
+        var f1 = document.getElementById("snf5342-widget-select-height");
+                    var i1 = document.getElementById("snf5342-widget-select-height-in");
+                    console.log(f1);
+                    console.log(i1);
+
+                    var feet =  Math.floor( height111 / 12);
+                    var inch =  Math.floor( height111 % 12);
+                    console.log("feet" + feet);
+                    console.log("inch", inch);
+
+                    f1.value = feet;
+                    i1.value = inch;
+}
+
 function drowcircle(){
 
         /*------- ProgressBar ----------*/
@@ -1802,4 +1872,4 @@ var BrandProfile = document.getElementById('snf5342-widget-form-control-brnad'),
             BrandHWScrollDiv.scrollTop = BrandHW.parentNode.offsetTop;
         }, 500);
     }
-} 
+}
