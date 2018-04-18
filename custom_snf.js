@@ -137,9 +137,9 @@
                 }, {
                     key: "resizeHandler",
                     value: function() {
-                       // console.log("this.selectorWidth",this.selector.offsetWidth);
+                       console.log("this.selectorWidth",this.selector.offsetWidth);
                         if(this.selector.offsetWidth == 0){
-                           // console.log("chnage width");
+                            console.log("chnage width");
                             this.selector.offsetWidth = 334;
                           this.resolveSlidesNumber(), this.selectorWidth = this.selector.offsetWidth, this.sliderFrame.style.width = this.selectorWidth / this.perPage * this.innerElements.length + "px", this.slideToCurrent()
                         }else{
